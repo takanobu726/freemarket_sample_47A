@@ -8,12 +8,12 @@
 |password|string|null: false|
 
 ### Asociation
-- has_many :items
-- has_many :mypages
-- has_many :comments
-- has_many :sell_items
-- has_many :trade_items
-- has_many :sold_items
+- has_many :items, dependent::destroy
+- has_many :mypages, dependent::destroy
+- has_many :comments, dependent::destroy
+- has_many :sell_items, dependent::destroy
+- has_many :trade_items, dependent::destroy
+- has_many :sold_items, dependent::destroy
 
 
 ## itemsテーブル
@@ -31,7 +31,7 @@
 |user_id|references|null: false, foreign_key: true|
 
 ### Asociation
-- has_many :comments
+- has_many :comments, dependent::destroy
 - has_many :items_brands
 - has_many :brands, through: :items_brands
 - belongs_to :user
