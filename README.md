@@ -9,7 +9,7 @@
 
 ### Asociation
 - has_many :items, dependent::destroy
-- has_one :mypage, dependent::destroy
+- has_one :profile, dependent::destroy
 - has_many :comments, dependent::destroy
 - has_many :sell_items, dependent::destroy
 - has_many :trade_items, dependent::destroy
@@ -72,7 +72,7 @@
 - belongs_to :item
 
 
-## mypagesテーブル
+## profilesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |first_name|string|null: false|
