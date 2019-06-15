@@ -9,7 +9,7 @@
 
 ### Asociation
 - has_many :items, dependent::destroy
-- has_many :mypages, dependent::destroy
+- has_one :mypage, dependent::destroy
 - has_many :comments, dependent::destroy
 - has_many :sell_items, dependent::destroy
 - has_many :trade_items, dependent::destroy
@@ -29,6 +29,7 @@
 |shipping_method|string|null: false|
 |prefecture|string|null: false|
 |user_id|references|null: false, foreign_key: true|
+|bottom_category_id|references|null: false, foreign_key: true|
 
 ### Asociation
 - has_many :comments, dependent::destroy
@@ -81,7 +82,7 @@
 |birth_year|integer|null: false|
 |birth_month|integer|null: false|
 |birth_day|integer|null: false|
-|postal_code|integer|null: false|
+|postal_code|string|null: false|
 |prefecture|string|null: false|
 |city|string|null: false|
 |address|string|null: false|
