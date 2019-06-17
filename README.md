@@ -136,7 +136,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|top_categories_id|references|null: false, foreign_key: true|
+|top_category_id|references|null: false, foreign_key: true|
 
 ### Asociation
 - has_many :bottom_categories
@@ -147,7 +147,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|mig_categories_id|references|null: false, foreign_key: ture|
+|mid_category_id|references|null: false, foreign_key: ture|
 
 ### Asociation
 - has_many :items
